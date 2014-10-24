@@ -74,15 +74,16 @@ for (var j=0; j < 9; j++) {
         valCellId = j;
     }
 }
-var target = null; 
+
 if (this.getCooldown ("jump") === 0) {
-	target = cells_biggest_coin[valCellId].pos;
-	if (target !== null) {
+	var target = cells_biggest_coin[valCellId];
+	if (target) {
 		this.say ("Jump pum bum");
 		this.jumpTo (target);
 	}
 }
-if (bestCoin !== null) {
+
+else if (bestCoin !== null) {
 	this.say ("Move toward to coin with " + Math.round (bestCoin.value * 100) + " value");
 	this.move (bestCoin.pos);
 }
