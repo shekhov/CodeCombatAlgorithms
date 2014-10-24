@@ -1,5 +1,3 @@
-//var bestCoinCost = 0;
-//var bestCoin;
 var items = this.getItems ();
 
 var cells_value = [0, 0, 0, 0, 0, 0, 0, 0, 0];
